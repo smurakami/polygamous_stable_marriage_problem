@@ -3,7 +3,7 @@
 """安定結婚問題"""
 
 import random as R
-capacity = 1
+capacity = 3
 
 DEBUG = False
 
@@ -159,12 +159,6 @@ if __name__ == "__main__":
     #         print m in f.priority_list
 
     smp(males, females)
-
-    # 改変
-    m6 = females[0].pop()
-    m0 = females[1].pop()
-    match(m0, females[0])
-    match(m6, females[1])
 
     print ""
     print "result: "
