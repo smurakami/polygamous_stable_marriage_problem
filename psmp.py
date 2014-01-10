@@ -91,9 +91,9 @@ def match(male, female):
     female.append(male)
     male.setPartner(female)
 
-def smp(males, females):
+def psmp(males, females):
     """安定結婚アルゴリズムの執行"""
-    if DEBUG: print "smp"
+    if DEBUG: print "psmp"
     p = {} # 各男性が何番目の女性を選ぶか
     for m in males:
         p[m] = 0
@@ -133,7 +133,6 @@ def shuffled(origin_list):
 
 
 if __name__ == "__main__":
-    R.seed(123)
     SIZE = 10
     males = [Male() for i in range(SIZE)]
     females = [Female() for i in range(SIZE)]
@@ -158,7 +157,7 @@ if __name__ == "__main__":
     #     for m in males:
     #         print m in f.priority_list
 
-    smp(males, females)
+    psmp(males, females)
 
     print ""
     print "result: "
