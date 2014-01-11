@@ -9,12 +9,20 @@ DEBUG = False
 
 class Man:
     """安定結婚アルゴリズムに置ける人のデータ構造"""
-    def __init__(self, priority_list = []):
+    def __init__(self, prop=None, priority_list = []):
+        """
+        prop: なにか荷物を持たせたかったらここに入れてあげると良い。
+        priority_list: ここには好きな順に人が入っている。最初は空でも良い
+        """
+        self.prop = prop
         self.priority_list = priority_list
         self.id = None
 
     def setPriorityList(self, priority_list):
-        """選好度リストのセット。リストには好きな順に人が入っている"""
+        """
+        選好度リストをセットする。
+        priority_list: ここに好きな順に人が入っている。
+        """
         self.priority_list = priority_list
 
     def priorityRank(self, man):
