@@ -41,7 +41,7 @@ class Male(Man):
     id_counter = 0 # idに使う
 
     def __init__(self, prop=None, priority_list=[]):
-        Man.__init__(self, prop=None, priority_list=[]) # 男性は人である
+        Man.__init__(self, prop, priority_list) # 男性は人である
         self.id = Male.id_counter # id
         Male.id_counter += 1
 
@@ -59,7 +59,7 @@ class Female(Man):
     id_counter = 0
 
     def __init__(self, prop=None, priority_list=[]):
-        Man.__init__(self, prop=None, priority_list=[]) # 女性は人である
+        Man.__init__(self, prop, priority_list) # 女性は人である
         self.id = Female.id_counter
         Female.id_counter += 1
         self.queue = [] # 現在つきあっている相手のリスト
